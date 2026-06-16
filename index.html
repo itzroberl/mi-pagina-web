@@ -3,23 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kits y auditorias rapidas para devs</title>
+  <meta name="description" content="Kit digital de 5 USD para preparar PRs de bounties open-source y mini-auditorias express de 20 USD para CV, LinkedIn, landings y productos.">
+  <title>Open-source Bounty PR Kit - 5 USD</title>
   <style>
     * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      color: #18242d;
-      background: #f5f8fb;
+      color: #17232c;
+      background: #f6f8f4;
     }
     main {
       width: min(1080px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 40px 0;
+      padding: 34px 0 42px;
     }
-    header { padding: 10px 0 22px; }
+    header { padding: 8px 0 20px; }
     .eyebrow {
-      color: #166071;
+      color: #27604d;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 13px;
@@ -28,11 +29,12 @@
       margin: 10px 0 12px;
       font-size: 38px;
       line-height: 1.12;
+      max-width: 880px;
     }
     .lead {
-      max-width: 820px;
+      max-width: 840px;
       margin: 0;
-      color: #52616e;
+      color: #4d5d68;
       font-size: 18px;
       line-height: 1.55;
     }
@@ -40,16 +42,16 @@
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 18px;
-      margin-top: 28px;
+      margin-top: 26px;
     }
-    .card, .note, .copybox {
+    .card, .note, .copybox, .proof {
       background: #fff;
-      border: 1px solid #dbe4eb;
+      border: 1px solid #d9e2dd;
       border-radius: 8px;
     }
     .card {
       padding: 24px;
-      min-height: 390px;
+      min-height: 410px;
       display: flex;
       flex-direction: column;
     }
@@ -59,77 +61,88 @@
       font-size: 34px;
       font-weight: 800;
     }
-    p, li { color: #4e5d69; line-height: 1.55; }
+    p, li { color: #4f5f69; line-height: 1.55; }
     ul { padding-left: 20px; margin-bottom: 20px; }
     .button {
       display: inline-block;
       margin-top: auto;
       width: fit-content;
-      background: #102f45;
+      background: #18384a;
       color: #fff;
       text-decoration: none;
       padding: 12px 16px;
       border-radius: 6px;
       font-weight: 700;
     }
-    .button.alt { background: #245d4f; }
-    .note { margin-top: 20px; padding: 18px; }
+    .button.alt { background: #2d604f; }
+    .proof {
+      margin-top: 18px;
+      padding: 16px 18px;
+    }
+    .proof strong { color: #17232c; }
+    .note { margin-top: 18px; padding: 18px; }
     .copybox { margin-top: 18px; padding: 18px; }
-    code { background: #edf2f6; border-radius: 4px; padding: 2px 5px; }
+    code { background: #edf2ef; border-radius: 4px; padding: 2px 5px; }
     @media (max-width: 760px) {
       .grid { grid-template-columns: 1fr; }
       h1 { font-size: 30px; }
+      .card { min-height: auto; }
     }
   </style>
 </head>
 <body>
   <main>
     <header>
-      <div class="eyebrow">Digital kit + mini-auditoria</div>
-      <h1>Kits y revisiones rapidas para devs, perfiles y productos</h1>
-      <p class="lead">Dos opciones simples: un kit digital de 5 USD para preparar mejores PRs de bounties open-source, o una mini-auditoria de 20 USD para CV, LinkedIn, landing page, pagina de producto o perfil dev.</p>
+      <div class="eyebrow">Digital kit + mini-auditoria express</div>
+      <h1>Open-source Bounty PR Starter Kit por 5 USD</h1>
+      <p class="lead">Plantillas practicas para elegir bounties viables, escribir mejores comentarios <code>/attempt</code>, preparar PRs mas claros y registrar validacion sin perder horas. Tambien hay una mini-auditoria de 20 USD para CV, LinkedIn, landing pages o perfiles dev.</p>
     </header>
 
     <section class="grid">
       <article class="card">
-        <div class="eyebrow">Kit digital</div>
+        <div class="eyebrow">Entrega digital</div>
         <h2>Open-source Bounty PR Starter Kit</h2>
         <div class="price">5 USD</div>
-        <p>Plantillas y checklists para intentar bounties de GitHub/Algora con PRs mas claros y mejor validados.</p>
+        <p>Para devs que intentan bounties pequenos en GitHub, Algora u open-source y quieren verse mas serios desde el primer comentario.</p>
         <ul>
-          <li>Checklist para elegir bounties viables</li>
+          <li>Checklist para filtrar bounties que si valen la pena</li>
           <li>Plantilla de comentario <code>/attempt</code></li>
-          <li>Plantilla de PR y log de validacion</li>
-          <li>Guion para video demo</li>
-          <li>Checklist de riesgos y seguridad</li>
+          <li>Plantilla de PR body con validacion clara</li>
+          <li>Validation log para pruebas, screenshots y comandos</li>
+          <li>Guion corto para demo video</li>
+          <li>Red flags de seguridad y reputacion</li>
         </ul>
         <a class="button" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=itzwoobsylarez%40gmail.com&amp;item_name=Open-source+Bounty+PR+Starter+Kit&amp;amount=5.00&amp;currency_code=USD">Comprar kit - 5 USD</a>
       </article>
 
       <article class="card">
-        <div class="eyebrow">Servicio express</div>
+        <div class="eyebrow">Servicio 24h</div>
         <h2>Mini-auditoria CV, LinkedIn, Landing o Producto</h2>
         <div class="price">20 USD</div>
-        <p>Revision concreta para mejorar claridad, posicionamiento o conversion sin una consultoria larga.</p>
+        <p>Revision concreta para mejorar claridad, posicionamiento o conversion sin contratar una consultoria larga.</p>
         <ul>
           <li>5 problemas principales</li>
           <li>5 arreglos concretos</li>
-          <li>3 opciones de headline/perfil</li>
+          <li>3 opciones de headline o perfil</li>
           <li>Una seccion reescrita lista para pegar</li>
-          <li>Entrega por email luego del pago</li>
+          <li>Entrega por email tras recibir el material</li>
         </ul>
         <a class="button alt" href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&amp;business=itzwoobsylarez%40gmail.com&amp;item_name=Mini+auditoria+express+o+kit+digital&amp;amount=20.00&amp;currency_code=USD">Pedir auditoria - 20 USD</a>
       </article>
     </section>
 
+    <section class="proof">
+      <p><strong>Entrega:</strong> despues del pago, envia comprobante y email de entrega a <strong>itzwoobsylarez@gmail.com</strong>. El kit se entrega como ZIP. La mini-auditoria se entrega dentro de 24 horas despues de recibir el enlace, texto o archivo a revisar.</p>
+    </section>
+
     <section class="copybox">
-      <h2>English version</h2>
-      <p>Two simple options: a $5 Open-source Bounty PR Starter Kit, or a $20 mini-audit for a resume, LinkedIn, landing page, product page, or developer profile.</p>
-      <p>After payment, email proof and the request to <strong>itzwoobsylarez@gmail.com</strong>.</p>
+      <h2>English</h2>
+      <p>A compact $5 template pack for developers applying to small GitHub/Algora/open-source bounties. Includes bounty triage, /attempt comment, PR body, validation log, demo script, and safety red flags.</p>
+      <p>There is also a $20 mini-audit for a resume, LinkedIn profile, landing page, product page, or developer profile. Delivery by email after payment.</p>
     </section>
 
     <div class="note">
-      El kit digital se entrega despues de confirmar el pago. La mini-auditoria se entrega dentro de 24 horas despues del pago y de recibir el enlace, texto o archivo a revisar.
+      The paid ZIP is private and is not published in this repository. Payment is handled through PayPal before delivery.
     </div>
   </main>
 </body>
