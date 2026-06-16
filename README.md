@@ -8,6 +8,9 @@ Pagina publica para vender dos ofertas simples:
 Pagina de venta:
 https://github.com/itzroberl/mi-pagina-web/blob/main/index.html
 
+Muestra gratis del kit:
+https://github.com/itzroberl/mi-pagina-web/blob/main/sample.md
+
 Issue publico de compra/contacto:
 https://github.com/itzroberl/mi-pagina-web/issues/1
 
