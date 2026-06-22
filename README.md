@@ -5,7 +5,10 @@ Pagina publica para vender dos ofertas simples:
 - Open-source Bounty PR Starter Kit: 5 USD
 - Mini-auditoria CV, LinkedIn, landing o producto: 20 USD
 
-Pagina de venta:
+URL publica directa:
+https://itzroberl.github.io/mi-pagina-web/
+
+Pagina de venta en GitHub:
 https://github.com/itzroberl/mi-pagina-web/blob/main/index.html
 
 Muestra gratis del kit:
