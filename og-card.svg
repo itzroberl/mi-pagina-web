@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Open-source Bounty PR Starter Kit</title>
+  <desc id="desc">A 5 USD template kit for open-source bounty pull requests.</desc>
+  <rect width="1200" height="630" fill="#f6f8f4"/>
+  <rect x="70" y="70" width="1060" height="490" rx="24" fill="#ffffff" stroke="#d9e2dd" stroke-width="4"/>
+  <text x="110" y="140" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#27604d">DIGITAL KIT</text>
+  <text x="110" y="220" font-family="Arial, sans-serif" font-size="66" font-weight="800" fill="#17232c">Open-source Bounty</text>
+  <text x="110" y="295" font-family="Arial, sans-serif" font-size="66" font-weight="800" fill="#17232c">PR Starter Kit</text>
+  <text x="110" y="365" font-family="Arial, sans-serif" font-size="34" fill="#4f5f69">Templates for /attempt, PR body, validation logs,</text>
+  <text x="110" y="410" font-family="Arial, sans-serif" font-size="34" fill="#4f5f69">demo scripts and bounty triage.</text>
+  <rect x="110" y="460" width="160" height="58" rx="10" fill="#18384a"/>
+  <text x="148" y="500" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">5 USD</text>
+  <text x="300" y="500" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#2d604f">PayPal delivery by email</text>
+</svg>
