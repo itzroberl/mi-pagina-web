@@ -16,98 +16,34 @@
   <title>Open-source Bounty PR Kit - 5 USD</title>
   <style>
     * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      color: #17232c;
-      background: #f6f8f4;
-    }
-    main {
-      width: min(1080px, calc(100% - 32px));
-      margin: 0 auto;
-      padding: 34px 0 42px;
-    }
+    body { margin: 0; font-family: Arial, sans-serif; color: #17232c; background: #f6f8f4; }
+    main { width: min(1080px, calc(100% - 32px)); margin: 0 auto; padding: 34px 0 42px; }
     header { padding: 8px 0 20px; }
-    .eyebrow {
-      color: #27604d;
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 13px;
-    }
-    h1 {
-      margin: 10px 0 12px;
-      font-size: 38px;
-      line-height: 1.12;
-      max-width: 880px;
-    }
-    .lead {
-      max-width: 840px;
-      margin: 0;
-      color: #4d5d68;
-      font-size: 18px;
-      line-height: 1.55;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 26px;
-    }
-    .card, .note, .copybox, .proof, .sharebox {
-      background: #fff;
-      border: 1px solid #d9e2dd;
-      border-radius: 8px;
-    }
-    .card {
-      padding: 24px;
-      min-height: 410px;
-      display: flex;
-      flex-direction: column;
-    }
+    .eyebrow { color: #27604d; font-weight: 700; text-transform: uppercase; font-size: 13px; }
+    h1 { margin: 10px 0 12px; font-size: 38px; line-height: 1.12; max-width: 880px; }
+    .lead { max-width: 840px; margin: 0; color: #4d5d68; font-size: 18px; line-height: 1.55; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; margin-top: 26px; }
+    .card, .note, .copybox, .proof, .sharebox, .toolbox { background: #fff; border: 1px solid #d9e2dd; border-radius: 8px; }
+    .card { padding: 24px; min-height: 410px; display: flex; flex-direction: column; }
     h2 { margin: 8px 0; font-size: 24px; }
-    .price {
-      margin: 8px 0 14px;
-      font-size: 34px;
-      font-weight: 800;
-    }
+    .price { margin: 8px 0 14px; font-size: 34px; font-weight: 800; }
     p, li { color: #4f5f69; line-height: 1.55; }
     ul { padding-left: 20px; margin-bottom: 20px; }
-    .button {
-      display: inline-block;
-      margin-top: auto;
-      width: fit-content;
-      background: #18384a;
-      color: #fff;
-      text-decoration: none;
-      padding: 12px 16px;
-      border-radius: 6px;
-      font-weight: 700;
-    }
+    .button { display: inline-block; margin-top: auto; width: fit-content; background: #18384a; color: #fff; text-decoration: none; padding: 12px 16px; border-radius: 6px; font-weight: 700; border: 0; cursor: pointer; }
     .button.alt { background: #2d604f; }
-    .secondary {
-      display: inline-block;
-      margin-top: 12px;
-      color: #18384a;
-      font-weight: 700;
-    }
-    .proof, .sharebox {
-      margin-top: 18px;
-      padding: 16px 18px;
-    }
+    .secondary { display: inline-block; margin-top: 12px; color: #18384a; font-weight: 700; }
+    .proof, .sharebox, .toolbox { margin-top: 18px; padding: 16px 18px; }
     .proof strong { color: #17232c; }
-    .sharebox code {
-      display: inline-block;
-      margin-top: 6px;
-      word-break: break-word;
-    }
+    .sharebox code { display: inline-block; margin-top: 6px; word-break: break-word; }
     .note { margin-top: 18px; padding: 18px; }
     .copybox { margin-top: 18px; padding: 18px; }
     code { background: #edf2ef; border-radius: 4px; padding: 2px 5px; }
-    @media (max-width: 760px) {
-      .grid { grid-template-columns: 1fr; }
-      h1 { font-size: 30px; }
-      .card { min-height: auto; }
-    }
+    label { display: block; margin-top: 12px; font-weight: 700; color: #253642; }
+    input, select { width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #cbd8d2; border-radius: 6px; font: inherit; }
+    .tool-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .score { margin-top: 14px; padding: 14px; background: #edf6f1; border-radius: 8px; color: #20362d; font-weight: 700; }
+    .muted { color: #60707a; font-size: 14px; }
+    @media (max-width: 760px) { .grid, .tool-grid { grid-template-columns: 1fr; } h1 { font-size: 30px; } .card { min-height: auto; } }
   </style>
 </head>
 <body>
@@ -121,6 +57,52 @@
     <section class="sharebox">
       <strong>URL publica:</strong><br>
       <code>https://itzroberl.github.io/mi-pagina-web/</code>
+    </section>
+
+    <section class="toolbox">
+      <div class="eyebrow">Free tool</div>
+      <h2>Bounty fit checker</h2>
+      <p>Evalua rapido si vale la pena intentar un bounty antes de comentar <code>/attempt</code>.</p>
+      <div class="tool-grid">
+        <label>Monto del bounty (USD)
+          <input id="amount" type="number" min="0" value="20">
+        </label>
+        <label>PRs/claims competidores
+          <input id="competitors" type="number" min="0" value="0">
+        </label>
+        <label>Validacion local
+          <select id="validation">
+            <option value="25">Clara y rapida</option>
+            <option value="10">Parcial</option>
+            <option value="0">No clara</option>
+          </select>
+        </label>
+      </div>
+      <div class="tool-grid">
+        <label>Issue sigue abierto
+          <select id="openIssue">
+            <option value="20">Si</option>
+            <option value="0">No / dudoso</option>
+          </select>
+        </label>
+        <label>Cambio pequeno
+          <select id="scope">
+            <option value="20">Si</option>
+            <option value="8">Medio</option>
+            <option value="0">Grande</option>
+          </select>
+        </label>
+        <label>Riesgo de seguridad/credenciales
+          <select id="risk">
+            <option value="20">Bajo</option>
+            <option value="5">Medio</option>
+            <option value="-20">Alto</option>
+          </select>
+        </label>
+      </div>
+      <button class="button" type="button" onclick="scoreBounty()">Calcular score</button>
+      <div id="score" class="score">Score pendiente.</div>
+      <p class="muted">El kit completo incluye checklist, plantillas y validation log para convertir este score en un comentario y PR mas fuertes.</p>
     </section>
 
     <section class="grid">
@@ -158,19 +140,27 @@
       </article>
     </section>
 
-    <section class="proof">
-      <p><strong>Entrega:</strong> despues del pago, envia comprobante y email de entrega a <strong>itzwoobsylarez@gmail.com</strong>. El kit se entrega como ZIP. La mini-auditoria se entrega dentro de 24 horas despues de recibir el enlace, texto o archivo a revisar.</p>
-    </section>
-
-    <section class="copybox">
-      <h2>English</h2>
-      <p>A compact $5 template pack for developers applying to small GitHub/Algora/open-source bounties. Includes bounty triage, /attempt comment, PR body, validation log, demo script, and safety red flags.</p>
-      <p>There is also a $20 mini-audit for a resume, LinkedIn profile, landing page, product page, or developer profile. Delivery by email after payment.</p>
-    </section>
-
-    <div class="note">
-      The paid ZIP is private and is not published in this repository. Payment is handled through PayPal before delivery.
-    </div>
+    <section class="proof"><p><strong>Entrega:</strong> despues del pago, envia comprobante y email de entrega a <strong>itzwoobsylarez@gmail.com</strong>. El kit se entrega como ZIP. La mini-auditoria se entrega dentro de 24 horas despues de recibir el enlace, texto o archivo a revisar.</p></section>
+    <section class="copybox"><h2>English</h2><p>A compact $5 template pack for developers applying to small GitHub/Algora/open-source bounties. Includes bounty triage, /attempt comment, PR body, validation log, demo script, and safety red flags.</p><p>There is also a $20 mini-audit for a resume, LinkedIn profile, landing page, product page, or developer profile. Delivery by email after payment.</p></section>
+    <div class="note">The paid ZIP is private and is not published in this repository. Payment is handled through PayPal before delivery.</div>
   </main>
+  <script>
+    function scoreBounty() {
+      const amount = Math.min(Number(document.getElementById('amount').value || 0), 100)
+      const competitors = Number(document.getElementById('competitors').value || 0)
+      const base = Math.min(15, Math.round(amount / 4))
+      const penalty = Math.min(35, competitors * 8)
+      const total = Math.max(0, Math.min(100, base - penalty
+        + Number(document.getElementById('validation').value)
+        + Number(document.getElementById('openIssue').value)
+        + Number(document.getElementById('scope').value)
+        + Number(document.getElementById('risk').value)))
+      let verdict = 'Evitar por ahora.'
+      if (total >= 75) verdict = 'Buen candidato: prepara /attempt y validation log.'
+      else if (total >= 50) verdict = 'Posible: revisa competencia y alcance antes de comentar.'
+      document.getElementById('score').textContent = `Score ${total}/100 - ${verdict}`
+    }
+    scoreBounty()
+  </script>
 </body>
 </html>
