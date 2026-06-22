@@ -14,6 +14,9 @@ https://github.com/itzroberl/mi-pagina-web/blob/main/index.html
 Muestra gratis del kit:
 https://github.com/itzroberl/mi-pagina-web/blob/main/sample.md
 
+Brief para mini-auditoria 20 USD:
+https://github.com/itzroberl/mi-pagina-web/blob/main/audit-brief.md
+
 Issue publico de compra/contacto:
 https://github.com/itzroberl/mi-pagina-web/issues/1
 
