@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://itzroberl.github.io/mi-pagina-web/sitemap.xml
