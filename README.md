@@ -8,6 +8,9 @@ Pagina publica para vender dos ofertas simples:
 URL publica directa:
 https://itzroberl.github.io/mi-pagina-web/
 
+Pagina simple de compra:
+https://github.com/itzroberl/mi-pagina-web/blob/main/purchase.md
+
 Pagina de venta en GitHub:
 https://github.com/itzroberl/mi-pagina-web/blob/main/index.html
 
