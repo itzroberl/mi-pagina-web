@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Herramienta gratis para evaluar si conviene intentar un bounty open-source antes de comentar /attempt. Incluye link a kit de plantillas por 5 USD.">
+  <link rel="canonical" href="https://itzroberl.github.io/mi-pagina-web/bounty-fit-checker.html">
+  <meta property="og:title" content="Bounty fit checker gratis">
+  <meta property="og:description" content="Evalua si un bounty vale la pena antes de perder horas. Kit de plantillas disponible por 5 USD.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://itzroberl.github.io/mi-pagina-web/bounty-fit-checker.html">
+  <meta property="og:image" content="https://itzroberl.github.io/mi-pagina-web/og-card.svg">
+  <title>Bounty fit checker gratis</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; color: #17232c; background: #f6f8f4; }
+    main { width: min(860px, calc(100% - 32px)); margin: 0 auto; padding: 36px 0; }
+    h1 { font-size: 36px; line-height: 1.12; margin: 0 0 10px; }
+    p { color: #4f5f69; line-height: 1.55; }
+    .panel { background: #fff; border: 1px solid #d9e2dd; border-radius: 8px; padding: 22px; margin-top: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+    label { display: block; font-weight: 700; color: #253642; }
+    input, select { width: 100%; margin-top: 6px; padding: 10px; border: 1px solid #cbd8d2; border-radius: 6px; font: inherit; }
+    button, .button { display: inline-block; background: #18384a; color: #fff; text-decoration: none; padding: 12px 16px; border-radius: 6px; font-weight: 700; border: 0; cursor: pointer; }
+    .button.alt { background: #2d604f; }
+    .score { margin-top: 16px; padding: 16px; background: #edf6f1; border-radius: 8px; color: #20362d; font-weight: 700; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; }
+    @media (max-width: 720px) { .grid { grid-template-columns: 1fr; } h1 { font-size: 30px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Bounty fit checker gratis</h1>
+    <p>Evalua rapido si vale la pena intentar un bounty open-source antes de comentar <code>/attempt</code>.</p>
+
+    <section class="panel">
+      <div class="grid">
+        <label>Monto del bounty (USD)
+          <input id="amount" type="number" min="0" value="20">
+        </label>
+        <label>PRs/claims competidores
+          <input id="competitors" type="number" min="0" value="0">
+        </label>
+        <label>Validacion local
+          <select id="validation">
+            <option value="25">Clara y rapida</option>
+            <option value="10">Parcial</option>
+            <option value="0">No clara</option>
+          </select>
+        </label>
+        <label>Issue sigue abierto
+          <select id="openIssue">
+            <option value="20">Si</option>
+            <option value="0">No / dudoso</option>
+          </select>
+        </label>
+        <label>Cambio pequeno
+          <select id="scope">
+            <option value="20">Si</option>
+            <option value="8">Medio</option>
+            <option value="0">Grande</option>
+          </select>
+        </label>
+        <label>Riesgo de seguridad/credenciales
+          <select id="risk">
+            <option value="20">Bajo</option>
+            <option value="5">Medio</option>
+            <option value="-20">Alto</option>
+          </select>
+        </label>
+      </div>
+      <div class="actions">
+        <button type="button" onclick="scoreBounty()">Calcular score</button>
+        <a class="button alt" href="https://itzroberl.github.io/mi-pagina-web/purchase.html">Comprar kit 5 USD</a>
+      </div>
+      <div id="score" class="score">Score pendiente.</div>
+    </section>
+
+    <section class="panel">
+      <h2>Kit completo</h2>
+      <p>El kit pago incluye checklist de bounties, plantilla <code>/attempt</code>, PR body, validation log, demo script y red flags.</p>
+      <a class="button" href="https://itzroberl.github.io/mi-pagina-web/purchase.html">Ver checkout 5/20 USD</a>
+    </section>
+  </main>
+  <script>
+    function scoreBounty() {
+      const amount = Math.min(Number(document.getElementById('amount').value || 0), 100)
+      const competitors = Number(document.getElementById('competitors').value || 0)
+      const base = Math.min(15, Math.round(amount / 4))
+      const penalty = Math.min(35, competitors * 8)
+      const total = Math.max(0, Math.min(100, base - penalty
+        + Number(document.getElementById('validation').value)
+        + Number(document.getElementById('openIssue').value)
+        + Number(document.getElementById('scope').value)
+        + Number(document.getElementById('risk').value)))
+      let verdict = 'Evitar por ahora.'
+      if (total >= 75) verdict = 'Buen candidato: prepara /attempt y validation log.'
+      else if (total >= 50) verdict = 'Posible: revisa competencia y alcance antes de comentar.'
+      document.getElementById('score').textContent = `Score ${total}/100 - ${verdict}`
+    }
+    scoreBounty()
+  </script>
+</body>
+</html>
