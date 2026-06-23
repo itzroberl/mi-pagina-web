@@ -1,0 +1,46 @@
+name: Pedido pagado 5-20 USD
+description: Solicitar entrega del kit o mini-auditoria despues del pago
+title: "Pedido: kit/auditoria"
+labels: [order]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias. Antes de abrir este pedido, paga por PayPal y no publiques datos sensibles.
+
+        Checkout directo: https://itzroberl.github.io/mi-pagina-web/purchase.html
+
+        Despues del pago, puedes abrir este issue con la informacion minima para coordinar la entrega.
+  - type: dropdown
+    id: producto
+    attributes:
+      label: Producto
+      options:
+        - Kit Bounty PR Starter - 5 USD
+        - Mini-auditoria express - 20 USD
+    validations:
+      required: true
+  - type: input
+    id: email_entrega
+    attributes:
+      label: Email de entrega
+      description: Email donde quieres recibir el ZIP o auditoria.
+      placeholder: nombre@example.com
+    validations:
+      required: true
+  - type: input
+    id: comprobante
+    attributes:
+      label: Referencia del pago
+      description: No pegues informacion privada; usa solo una referencia corta o indica que enviaste comprobante por email.
+      placeholder: Enviado por email / referencia corta
+    validations:
+      required: true
+  - type: textarea
+    id: material
+    attributes:
+      label: Material para mini-auditoria
+      description: Solo para auditoria de 20 USD. Pega enlaces publicos o una descripcion breve.
+      placeholder: Link a landing, repo, CV publico o texto a revisar.
+    validations:
+      required: false
