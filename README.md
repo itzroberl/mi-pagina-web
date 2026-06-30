@@ -1,38 +1,28 @@
-# Kits y auditorias rapidas
+# Bounty PR Starter Kit and Express Audits
 
-Pagina publica para vender dos ofertas simples:
+Practical templates for open-source bounty contributors, plus focused 24-hour audits.
 
-- Open-source Bounty PR Starter Kit: 5 USD
-- Mini-auditoria CV, LinkedIn, landing o producto: 20 USD
+## Offers
 
-URL publica directa:
-https://itzroberl.github.io/mi-pagina-web/
+- **Bounty PR Starter Kit — $5:** PR template, triage checklist, workflow scripts, and ready-to-adapt response templates.
+- **Express mini-audit — $20:** actionable review of a landing page, product page, CV, LinkedIn profile, or GitHub project.
 
-Checkout directo:
-https://itzroberl.github.io/mi-pagina-web/purchase.html
+[Buy securely with PayPal](https://itzroberl.github.io/mi-pagina-web/purchase.html) | [English storefront](https://itzroberl.github.io/mi-pagina-web/en.html) | [Free sample](https://github.com/itzroberl/mi-pagina-web/blob/main/sample.md)
 
-Abrir pedido despues del pago:
-https://github.com/itzroberl/mi-pagina-web/issues/new?template=order.yml
+Delivery is sent by email after payment confirmation. The private product ZIP is not stored in this public repository.
 
-Pagina simple de compra:
-https://github.com/itzroberl/mi-pagina-web/blob/main/purchase.md
+## En español
 
-Pagina de venta en GitHub:
-https://github.com/itzroberl/mi-pagina-web/blob/main/index.html
+Plantillas prácticas para responder a bounties open source y mini-auditorías concretas con entrega rápida.
 
-Muestra gratis del kit:
-https://github.com/itzroberl/mi-pagina-web/blob/main/sample.md
+- **Kit Bounty PR — 5 USD**
+- **Mini-auditoría express — 20 USD**
 
-Brief para mini-auditoria 20 USD:
-https://github.com/itzroberl/mi-pagina-web/blob/main/audit-brief.md
+[Comprar](https://itzroberl.github.io/mi-pagina-web/purchase.html) | [Ver FAQ](https://itzroberl.github.io/mi-pagina-web/faq.html) | [Abrir pedido después del pago](https://github.com/itzroberl/mi-pagina-web/issues/new?template=order.yml)
 
-Issue publico de compra/contacto:
-https://github.com/itzroberl/mi-pagina-web/issues/1
+## Direct payment links
 
-Checkout del kit 5 USD:
-https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=itzwoobsylarez%40gmail.com&item_name=Open-source+Bounty+PR+Starter+Kit&amount=5.00&currency_code=USD
+- [Bounty PR Starter Kit — $5](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=itzwoobsylarez%40gmail.com&item_name=Open-source+Bounty+PR+Starter+Kit&amount=5.00&currency_code=USD)
+- [Express mini-audit — $20](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=itzwoobsylarez%40gmail.com&item_name=Mini+auditoria+express+o+kit+digital&amount=20.00&currency_code=USD)
 
-Checkout mini-auditoria 20 USD:
-https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=itzwoobsylarez%40gmail.com&item_name=Mini+auditoria+express+o+kit+digital&amount=20.00&currency_code=USD
-
-Entrega: por email despues de confirmar el pago. El repositorio no incluye el ZIP privado del kit.
+Payment email: `itzwoobsylarez@gmail.com`
